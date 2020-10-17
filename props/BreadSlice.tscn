@@ -10,8 +10,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 55.5576, 56.2223 )
 
-[node name="BreadSlice" type="KinematicBody2D"]
-input_pickable = true
+[node name="BreadSlice" type="Area2D"]
 script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -36,13 +35,6 @@ position = Vector2( 1.09181, -31.8396 )
 scale = Vector2( 0.387812, 0.227813 )
 texture = ExtResource( 1 )
 
-[node name="Jam" type="Sprite" parent="."]
-visible = false
-position = Vector2( 4.72026, 2.09789 )
-rotation = 0.132405
-scale = Vector2( 0.379247, 0.259248 )
-texture = ExtResource( 4 )
-
 [node name="PeanutButter" type="Node2D" parent="."]
 
 [node name="Layer1" type="Sprite" parent="PeanutButter"]
@@ -57,4 +49,13 @@ position = Vector2( 2.9742, 1.6409 )
 rotation = -0.0265471
 scale = Vector2( 0.32, 0.240001 )
 texture = ExtResource( 3 )
+
+[node name="Jam" type="Node2D" parent="."]
+
+[node name="Layer1" type="Sprite" parent="Jam"]
+visible = false
+position = Vector2( 4.72026, 2.09789 )
+rotation = 0.132405
+scale = Vector2( 0.379247, 0.259248 )
+texture = ExtResource( 4 )
 [connection signal="input_event" from="." to="." method="_on_BreadSlice_input_event"]

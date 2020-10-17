@@ -26,7 +26,6 @@ func _process(delta):
 	if prev_knife_position != Vector2.ZERO:
 		var knife_velocity : Vector2 = knife_position - prev_knife_position
 		var knife_speed = knife_velocity.length() / delta
-		print(knife_speed)
 		if knife_velocity.x < 0 and knife_speed > interact_min_speed:
 			knife.spread = give_spread
 	
