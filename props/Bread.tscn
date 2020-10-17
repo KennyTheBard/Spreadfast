@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/bread.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 59.6153, 57.8 )
+
+[node name="Bread" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 32.4304, -6.94938 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 23.2625, -16.8006 )
+scale = Vector2( 0.241488, 0.241488 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 28.505, -14.4109 )
+scale = Vector2( 0.241488, 0.241488 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 34.8449, -11.4604 )
+scale = Vector2( 0.241488, 0.241488 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 40.3315, -6.65681 )
+scale = Vector2( 0.241488, 0.241488 )
+texture = ExtResource( 2 )

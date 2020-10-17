@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/bread.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 38.1231, 40.5984 )
+
+[node name="Butter" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+self_modulate = Color( 0.992157, 1, 0, 1 )
+position = Vector2( -0.611725, -4.28204 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
