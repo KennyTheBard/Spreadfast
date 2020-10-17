@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/bread.png" type="Texture" id=1]
+[ext_resource path="res://props/Spread.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 38.5782, 38.7624 )
 
-[node name="PeanutButter" type="Area2D"]
+[node name="Spread" type="Area2D"]
+script = ExtResource( 2 )
+give_spread = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -15,3 +18,5 @@ self_modulate = Color( 0.666667, 0.501961, 0, 1 )
 position = Vector2( -1.53677, -3.68829 )
 scale = Vector2( 0.200002, 0.200002 )
 texture = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Spread_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Spread_body_exited"]
